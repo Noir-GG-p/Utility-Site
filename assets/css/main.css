@@ -1,0 +1,55 @@
+/* -------------------------------
+   Global Styles
+---------------------------------*/
+
+/* Body font is already set via Tailwind, but extra spacing */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* -------------------------------
+   Tool Cards
+---------------------------------*/
+.tool-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none; /* Remove link underline */
+  color: inherit;       /* Keep text color */
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+
+/* -------------------------------
+   Sections
+---------------------------------*/
+section {
+  scroll-margin-top: 80px; /* offset for fixed navbar */
+}
+
+/* -------------------------------
+   Footer
+---------------------------------*/
+footer {
+  font-size: 0.9rem;
+}
+
+/* -------------------------------
+   Mobile Menu (Tailwind handles most)
+---------------------------------*/
+/* Optional extra spacing for mobile menu links */
+#mobileMenu a {
+  font-weight: 500;
+}
+

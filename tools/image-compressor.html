@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Compressor | Toolify</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/tool.css" />
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <h1 class="text-xl font-bold text-blue-600">Toolify</h1>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6 font-medium">
+          <a href="../index.html" class="hover:text-blue-600">Home</a>
+          <a href="#compressor" class="hover:text-blue-600">Image Compressor</a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="menuBtn" class="md:hidden text-xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+      <a href="../index.html" class="block px-4 py-3 hover:bg-gray-100">Home</a>
+      <a href="#compressor" class="block px-4 py-3 hover:bg-gray-100">Image Compressor</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-10 text-center">
+    <h2 class="text-3xl font-bold mb-4">Image Compressor</h2>
+    <p class="text-gray-600 max-w-xl mx-auto">
+      Reduce image size instantly. Works for JPG, PNG, WEBP. Client-side only.
+    </p>
+  </section>
+
+  <!-- IMAGE COMPRESSOR TOOL -->
+  <section id="compressor" class="max-w-3xl mx-auto px-4 py-10">
+    <div class="bg-white p-6 rounded-xl shadow-md">
+      <input 
+        type="file" 
+        id="imageInput" 
+        accept="image/*"
+        class="mb-4 block w-full text-sm"
+      />
+
+      <label class="block mb-2 font-medium">Compression Quality</label>
+      <input 
+        type="range" 
+        id="quality" 
+        min="0.1" 
+        max="1" 
+        step="0.1" 
+        value="0.7"
+        class="w-full mb-4"
+      />
+
+      <div id="preview" class="hidden">
+        <img id="previewImg" class="max-h-64 mx-auto mb-4 rounded"/>
+        <p class="text-sm text-gray-600 mb-2" id="sizeInfo"></p>
+
+        <button 
+          id="downloadBtn"
+          class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700"
+        >
+          Download Compressed Image
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 text-center py-6 mt-10">
+    <p>© 2026 Toolify — Built for Project Demo</p>
+  </footer>
+
+  <!-- External JS -->
+  <script src="../assets/js/navbar.js"></script>
+  <script src="../assets/js/image-compressor.js"></script>
+</body>
+</html>

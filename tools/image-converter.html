@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Converter | Toolify</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/tool.css" />
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <h1 class="text-xl font-bold text-blue-600">Toolify</h1>
+
+        <div class="hidden md:flex space-x-6 font-medium">
+          <a href="../index.html" class="hover:text-blue-600">Home</a>
+          <a href="#converter" class="hover:text-blue-600">Image Converter</a>
+        </div>
+
+        <button id="menuBtn" class="md:hidden text-xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+      <a href="../index.html" class="block px-4 py-3 hover:bg-gray-100">Home</a>
+      <a href="#converter" class="block px-4 py-3 hover:bg-gray-100">Image Converter</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-10 text-center">
+    <h2 class="text-3xl font-bold mb-4">Image Converter</h2>
+    <p class="text-gray-600 max-w-xl mx-auto">
+      Convert images between JPG, PNG, and WEBP formats. Fast, private, and browser-only.
+    </p>
+  </section>
+
+  <!-- TOOL -->
+  <section id="converter" class="max-w-4xl mx-auto px-4 py-10">
+    <div class="bg-white p-6 rounded-xl shadow-md space-y-4">
+
+      <!-- Options -->
+      <div class="flex flex-wrap gap-4 items-center">
+        <label class="flex items-center space-x-2">
+          <input type="checkbox" id="bulkToggle" class="h-5 w-5 text-blue-600">
+          <span>Enable Bulk Upload</span>
+        </label>
+
+        <label class="flex items-center space-x-2">
+          <span>Convert to:</span>
+          <select id="formatSelect" class="border rounded p-2">
+            <option value="image/jpeg">JPG</option>
+            <option value="image/png">PNG</option>
+            <option value="image/webp">WEBP</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- Quality -->
+      <div>
+        <label class="block font-medium mb-1">
+          Quality (JPG / WEBP only)
+        </label>
+        <input
+          type="range"
+          id="qualityInput"
+          min="0.1"
+          max="1"
+          step="0.1"
+          value="0.9"
+          class="w-full"
+        />
+      </div>
+
+      <!-- File input -->
+      <input
+        type="file"
+        id="imageInput"
+        accept="image/*"
+        class="block w-full text-sm"
+      />
+
+      <!-- Preview Grid -->
+      <div
+        id="previewGrid"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6"
+      ></div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 text-center py-6 mt-10">
+    <p>© 2026 Toolify — Built for Project Demo</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="../assets/js/navbar.js"></script>
+  <script src="../assets/js/image-converter.js"></script>
+</body>
+</html>
