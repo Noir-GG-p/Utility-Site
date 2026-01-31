@@ -1,0 +1,86 @@
+/* TOOLBAR */
+.pdf-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  overflow-x: auto;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+/* Fix / unfix toggle (CSS-only) */
+#fixToolbarToggle:not(:checked) ~ .pdf-toolbar {
+  position: relative;
+}
+
+/* Toolbar buttons */
+.tool-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.75rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tool-btn i {
+  font-size: 0.9rem;
+}
+
+.tool-btn:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #b91c1c;
+}
+
+/* MAIN LAYOUT */
+.pdf-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  height: calc(100vh - 112px);
+}
+
+/* SIDEBAR */
+.pdf-sidebar {
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.sidebar-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* VIEWER */
+.pdf-viewer {
+  background: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+/* Placeholder */
+.pdf-placeholder {
+  text-align: center;
+}
+
+/* Scrollbar styling (optional polish) */
+.pdf-toolbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.pdf-toolbar::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}

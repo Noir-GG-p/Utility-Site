@@ -25,12 +25,7 @@
       <div class="flex justify-between items-center h-16">
         <h1 class="text-xl font-bold text-blue-600">Toolify</h1>
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-6 font-medium">
-          <a href="#images" class="hover:text-blue-600">Images</a>
-          <a href="#videos" class="hover:text-blue-600">Videos</a>
-          <a href="#text" class="hover:text-blue-600">Text</a>
-        </div>
+      
 
         <!-- Mobile Hamburger -->
         <button id="menuBtn" class="md:hidden text-xl">
@@ -42,7 +37,6 @@
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
       <a href="#images" class="block px-4 py-3 hover:bg-gray-100">Images</a>
-      <a href="#videos" class="block px-4 py-3 hover:bg-gray-100">Videos</a>
       <a href="#text" class="block px-4 py-3 hover:bg-gray-100">Text</a>
     </div>
   </nav>
@@ -54,6 +48,7 @@
       Simple, fast, and free tools for images, videos, and text — all in one place.
     </p>
   </section>
+
 
   <!-- IMAGE TOOLS -->
   <section id="images" class="max-w-7xl mx-auto px-4 py-10">
@@ -74,49 +69,30 @@
     </div>
   </section>
 
-  <!-- VIDEO TOOLS -->
-  <section id="videos" class="bg-white py-10">
-    <div class="max-w-7xl mx-auto px-4">
-      <h3 class="text-2xl font-semibold mb-6">🎥 Video Tools</h3>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <a href="#" class="tool-card">
-          <i class="fas fa-music text-3xl text-purple-600 mb-4"></i>
-          <h4 class="font-semibold">Video to MP3</h4>
-        </a>
-        <a href="#" class="tool-card">
-          <i class="fas fa-file-video text-3xl text-purple-600 mb-4"></i>
-          <h4 class="font-semibold">Video Compressor</h4>
-        </a>
-        <a href="#" class="tool-card">
-          <i class="fas fa-cut text-3xl text-purple-600 mb-4"></i>
-          <h4 class="font-semibold">Video Trimmer</h4>
-        </a>
-      </div>
-    </div>
-  </section>
+
 
   <!-- TEXT TOOLS -->
   <section id="text" class="max-w-7xl mx-auto px-4 py-10">
     <h3 class="text-2xl font-semibold mb-6">📝 Text Tools</h3>
     <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <a href="#" class="tool-card">
+      <a href="tools/word-counter.html" class="tool-card">
         <i class="fas fa-font text-3xl text-green-600 mb-4"></i>
         <h4 class="font-semibold">Word Counter</h4>
       </a>
-      <a href="#" class="tool-card">
+      <a href="tools/case-converter.html" class="tool-card">
         <i class="fas fa-text-height text-3xl text-green-600 mb-4"></i>
         <h4 class="font-semibold">Case Converter</h4>
       </a>
-      <a href="#" class="tool-card">
+      <a href="tools/find-replace.html" class="tool-card">
         <i class="fas fa-code text-3xl text-green-600 mb-4"></i>
-        <h4 class="font-semibold">Text Cleaner</h4>
+        <h4 class="font-semibold">Find and replace</h4>
       </a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-gray-300 text-center py-6">
-    <p>© 2026 Toolify — Built for Project Demo</p>
+    <p>© 2026 Toolify — Built to make your life easy</p>
   </footer>
 
   <!-- External JS -->
